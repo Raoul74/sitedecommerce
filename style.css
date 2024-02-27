@@ -1,0 +1,369 @@
+/* styles.css */
+
+/* Réinitialisation des styles par défaut */
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles généraux */
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+
+  /* En-tête */
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fa86fa;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    /* position:fixed; */
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  nav {
+    display: flex;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Section principale */
+  
+  section {
+    /* margin-bottom: 20px; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;  
+    
+  }
+
+
+  .burger-icon {
+    display: none; /* Hide the button on larger screens */
+}
+
+@media screen and (max-width: 758px) {
+    .burger-icon {
+        display: block; /* Show the button on smaller screens */
+
+
+    }
+
+    nav ul  {
+        /* display: none; Hide the navigation menu by default on smaller screens  */
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+  @media (max-width: 798px) {
+    .product-list {
+     /* Deux boîtes par ligne */
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 663px) {
+    .product-list {
+     /* Deux boîtes par ligne */
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+   
+  
+  .product {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid cyan;
+    border-radius:10px;
+  }
+  
+  .product img {
+    /* width: 100%; */
+    /* max-height: 200px; */
+    object-fit: cover;
+    margin-bottom: 10;
+  }
+  
+  .product h3 {
+    margin-bottom: 10px;
+  }
+  
+  .product p {
+    margin-bottom: 10px;
+  }
+  
+  .product button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .product button::hover {
+    background-color: chocolate;
+  }
+
+
+
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide h3{
+    /* flex: 0 0 100%; */
+    text-align: center;
+  }
+  
+  .slide img {
+    width:350px;
+    height:200px;
+    /* object-fit: cover; */
+    justify-content: center;
+
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  } 
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+
+
+  .propos{
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+  }
+
+
+
+  .propos h2{
+    border: 2px solid red;
+    /* width: 370px; */
+    /* margin-left: 340px; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+/* ********************************************************************
+formulaire */
+/* *********************************************************************** */
+
+/* var pour les couleurs */
+:root{  
+  --color-first:#1ec36dd9;
+  --color-second:#f0f0f0;
+  --color-white:#fff;
+  --color-succes:#2ecc71;
+  --color-error:#E74C3C;
+  
+  }
+  
+  .bodi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-first) ;
+    min-height: 100vh;
+}
+
+  
+  .container{
+      background-color: var(--color-white);
+      border-radius: 25px;
+      width: 400px;
+      /* max-width: 100%; */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  
+  }
+  
+  .header h2{
+      text-align: center;
+      font-size:30px;
+  }
+  
+  
+  #form{
+      padding: 30px 40px;
+  }
+  
+  #form button{
+     color:white;
+     padding: 12px;
+     width: 100%;
+     background-color: var(--color-first);
+  }
+  
+  
+  .form-control{
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom:10px ;
+     
+  }
+  
+  
+  .form-control input{
+      
+      border-radius: 4px;
+      font-size:14px ;
+      display: block;
+      height: 40px;
+      width: 100%;
+      padding-left: 10px;
+  }
+  
+  
+  .form-control label{
+      display: inline-block;
+  }
+  
+  .form-control i{
+      position: absolute;
+      top: 30px;
+      left:300px ;
+      right: 10px;
+      visibility: hidden;
+  }
+  
+  .form-control small{
+      position:absolute;
+       visibility: hidden; 
+      bottom: 0;
+      left: 0;
+  
+  }
+  
+  .form-control button{
+      display: block;
+      height: 60%;
+      background-color:var(--color-first);
+      border: 2px solid var(--color-first);
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+  }
+  
+  .form-control.succes input{
+      border-color: var(--color-succes);
+  }
+  
+  
+  .form-control.succes i.fa-check-circle {
+      color: var(--color-succes);
+      visibility: visible;
+  
+  }
+  
+  .form-control.error input{
+      border-color: var(--color-error);
+  }
+  
+  
+  .form-control.error i.fa-exclamation {
+      color: var(--color-error);
+      visibility: visible;
+  
+  }
+  
+  .form-control.error small {
+      color: var(--color-error);
+      visibility: visible;
+  
+  }
+
+
+
+  .container{
+    display: flex;
+    width: 100%;
+    padding: 56px;
+  }
+  
+   
+  
+
+
+
+
+  
+  /* Pied de page */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
